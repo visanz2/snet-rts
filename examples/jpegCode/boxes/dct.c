@@ -26,14 +26,13 @@ void *dct( void *hnd, c4snet_data_t *Matrix, c4snet_data_t *color, c4snet_data_t
 
 	signed short short_dctresult [ MATRIX_SIZE * MATRIX_SIZE];
 
-    int inr, inc;       /* rows and columns of input image */
     int intr, intc;     /* rows and columns of intermediate image */
     int outr, outc;     /* rows and columns of dct */
     int f_val;      /* cumulative sum */
 
     int inter[8][8];    /* stores intermediate result */
 
-    int i,j,k;
+    int i,k;
         k=0;
 
     for (intr=0; intr<8; intr++)

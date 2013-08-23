@@ -41,7 +41,7 @@ void *openBMP(void *hnd, c4snet_data_t * bmpfilename, c4snet_data_t * jpgfilenam
 
     /* Start get bmp header */
 
-	unsigned char buffer[4];
+	//unsigned char buffer[4];
 
 	fseek(infile,14,SEEK_SET);
 	fread(bmpheader, sizeof(INFOHEADER), 1, infile);
@@ -68,7 +68,7 @@ void *openBMP(void *hnd, c4snet_data_t * bmpfilename, c4snet_data_t * jpgfilenam
 	/* Start writejpegheader */
 
 	unsigned int  huffmantablesize, previoussize;
-	unsigned char QTcount, i, j, components, id, huffmantablecount;
+	unsigned char QTcount, i, components, id, huffmantablecount;
 	unsigned short length, headerlength;
 
 	//Number of Quatization Tables

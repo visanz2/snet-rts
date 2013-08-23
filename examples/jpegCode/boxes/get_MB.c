@@ -9,13 +9,13 @@
 
 void *get_MB (void *hnd, c4snet_data_t *rows, c4snet_data_t *cols, c4snet_data_t * infile, c4snet_data_t * outfile)
 {
-	int size_matrix = MACRO_BLOCK_SIZE * (MACRO_BLOCK_SIZE*3);
+	//int size_matrix = MACRO_BLOCK_SIZE * (MACRO_BLOCK_SIZE*3);
 
 	void** p_infile  = (void **) C4SNetGetData(infile);
-	void** p_outfile = (void **) C4SNetGetData(outfile);
+	//void** p_outfile = (void **) C4SNetGetData(outfile);
 
 	FILE *st_infile = (FILE *) *p_infile;
-	FILE *st_outfile = (FILE *) *p_outfile;
+	//FILE *st_outfile = (FILE *) *p_outfile;
 
 	static unsigned char buffer[MACRO_BLOCK_SIZE*3];  // move array on main memory
 

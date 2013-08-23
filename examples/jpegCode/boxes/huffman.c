@@ -203,7 +203,7 @@ void HuffmanEncodeFinishSend(FILE *outfile)
 void HuffmanEncodeUsingDCTable(unsigned char magnitude, FILE *outfile)
 // Translate magnitude into needed data (from table) and send it
 {
-        unsigned char send;
+        //unsigned char send;
         unsigned short int huffmancode, huffmanlengt;
         ConvertDCMagnitudeY(magnitude, &huffmancode, &huffmanlengt);
         WriteRawBits16(huffmanlengt,huffmancode, outfile);
@@ -215,7 +215,7 @@ void HuffmanEncodeUsingDCTable(unsigned char magnitude, FILE *outfile)
 void HuffmanEncodeUsingACTable(unsigned char mag, FILE *outfile)
 // Translate magnitude into needed data (from table) and send it
 {
-        unsigned char send;
+        //unsigned char send;
         unsigned short int huffmancode, huffmanlengt;
         ConvertACMagnitudeY(mag, &huffmancode, &huffmanlengt);
         WriteRawBits16(huffmanlengt,huffmancode, outfile);
